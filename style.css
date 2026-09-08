@@ -5,7 +5,9 @@ body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Hel
 main, header, footer { max-width: 40rem; margin: 0 auto; }
 header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 1rem; border-bottom: 1px solid var(--line); }
 header .brand { display: flex; align-items: center; gap: .7rem; color: var(--text); text-decoration: none; font-weight: 800; font-size: 1.1rem; letter-spacing: .04em; text-transform: uppercase; }
-header .brand img { width: 40px; height: 40px; border-radius: 10px; }
+/* the icon art has a wide dark margin around the glyph; show the centre of an enlarged copy */
+header .brand .logo { width: 40px; height: 40px; overflow: hidden; border-radius: 10px; flex: none; }
+header .brand .logo img { display: block; width: 96px; height: 96px; margin: -28px; }
 nav a { color: var(--dim); text-decoration: none; margin-left: 1rem; }
 nav a[aria-current="page"], nav a:hover { color: var(--text); }
 h1 { font-size: 2rem; line-height: 1.15; margin: 2rem 0 .5rem; }
